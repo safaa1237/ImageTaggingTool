@@ -1,10 +1,6 @@
 <template>
   <div>
-    <button
-      v-on:mouseover="hover = true"
-      v-on:mouseleave="hover = false"
-      :class="{ inactiveBtn: !hover, activeBtn: hover }"
-    >
+    <button>
       {{ text }}
     </button>
   </div>
@@ -28,27 +24,20 @@ export default {
 </script>
 
 <style scoped  >
-.inactiveBtn {
-  font-size: 16px;
-  text-align: center;
-  display: inline-block;
+button {
+  font: inherit;
+  border: 1px solid #0076bb;
+  background-color: #0076bb;
   color: white;
-  background-color: blue;
-  border: 1px solid white;
-  border-radius: 4px;
-  width: 40px;
-  height: 20px;
-}
-.activeBtn {
-  font-size: 16px;
-  text-align: center;
-  display: inline-block;
-  color: blue;
-  border-radius: 4px;
-  width: 40px;
-  height: 20px;
   cursor: pointer;
-  background-color: transparent;
-  border: 1px solid aqua;
+  padding: 0.5rem 0.9rem;
+  border-radius: 9px;
+  font-size: 0.6rem;
+}
+
+button:hover,
+button:active {
+  border-color: #002350;
+  background-color: #002350;
 }
 </style>

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="gallery">
+    <div class="image" v-on:click="openTaggingPage()">
       <a target="_blank" href="img_5terre.jpg">
         <img
           src="https://upload.wikimedia.org/wikipedia/commons/6/68/St_Kilda_Road_start.jpg"
@@ -9,7 +9,7 @@
           height="400"
         />
       </a>
-      <div class="desc">Add a description of the image here</div>
+      <div class="desc">{{ $store.state.tags }}</div>
     </div>
   </div>
 </template>
@@ -18,12 +18,19 @@
 export default {
   name: "ImageGallery",
   components: {},
-  method: {},
+  method: {
+    openTaggingPage() {
+      // this.$router.push({
+      //   name: "tagging",
+      //   //query: { final_result: this.result },
+      // });
+    },
+  },
 };
 </script>
 
 <style scoped>
-div.gallery {
+div.image {
   font-size: 7px;
   margin: 5px;
   border: 1px solid #ccc;
@@ -32,11 +39,11 @@ div.gallery {
   width: 180px;
 }
 
-div.gallery:hover {
+div.image:hover {
   border: 1px solid #777;
 }
 
-div.gallery img {
+div.image img {
   width: 100%;
   height: auto;
 }

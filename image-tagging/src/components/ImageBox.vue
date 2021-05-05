@@ -16,7 +16,7 @@ export default {
 <style>
 .frame {
   height: 220px;
-  width: 60%;
+  width: 90%;
   display: block;
   margin: auto;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,

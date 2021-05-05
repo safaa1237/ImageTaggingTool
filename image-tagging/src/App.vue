@@ -1,17 +1,14 @@
 <template>
-  <div id="app">
-    <ImageGallery></ImageGallery>
-  </div>
+  <div id="app"><Tagging></Tagging></div>
 </template>
 
 <script>
-//import Tagging from "./views/Tagging";
-import ImageGallery from "./views/ImageGallery";
+import Tagging from "./views/Tagging";
+
 export default {
   name: "App",
   components: {
-    //Tagging,
-    ImageGallery,
+    Tagging,
   },
 };
 </script>
