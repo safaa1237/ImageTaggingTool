@@ -3,11 +3,7 @@
     <button
       v-on:mouseover="hover = true"
       v-on:mouseleave="hover = false"
-      :class="[
-        small
-          ? { inactiveSmallBtn: !hover, activeSmallBtn: hover }
-          : { inactiveBtn: !hover, activeBtn: hover },
-      ]"
+      :class="{ inactiveBtn: !hover, activeBtn: hover }"
     >
       {{ text }}
     </button>
@@ -31,55 +27,28 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped  >
-@import "../style.scss";
-
+<style scoped  >
 .inactiveBtn {
   font-size: 16px;
   text-align: center;
   display: inline-block;
-  margin-top: 40px;
   color: white;
-  background-color: $main_color;
-  border-radius: 10px;
-  width: 200px;
-  height: 60px;
+  background-color: blue;
+  border: 1px solid white;
+  border-radius: 4px;
+  width: 40px;
+  height: 20px;
 }
 .activeBtn {
   font-size: 16px;
   text-align: center;
   display: inline-block;
-  margin-top: 40px;
-  color: $main_color;
-  border-radius: 10px;
-  width: 200px;
-  height: 60px;
+  color: blue;
+  border-radius: 4px;
+  width: 40px;
+  height: 20px;
   cursor: pointer;
   background-color: transparent;
-  border: 2px solid $main_color;
-}
-.inactiveSmallBtn {
-  font-size: 14px;
-  text-align: center;
-  display: inline-block;
-  color: white;
-  background-color: $main_color;
-  border-radius: 5px;
-  margin-top: -5px;
-  width: 150px;
-  height: 40px;
-}
-.activeSmallBtn {
-  font-size: 14px;
-  text-align: center;
-  display: inline-block;
-  color: $main_color;
-  border-radius: 5px;
-  margin-top: -5px;
-  width: 150px;
-  height: 40px;
-  cursor: pointer;
-  background-color: transparent;
-  border: 2px solid $main_color;
+  border: 1px solid aqua;
 }
 </style>
