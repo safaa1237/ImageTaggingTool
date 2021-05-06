@@ -38,8 +38,8 @@
 
 ## About The Project
 
- <a href="https://github.com/othneildrew/Best-README-Template">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
+ <a >
+    <img src="/image-tagging/src/assets/capture.JPG" alt="Logo" width="80" height="80">
   </a>
 
 the project is an answer to a code challeneg and the requirememte are :
