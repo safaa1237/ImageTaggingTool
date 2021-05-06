@@ -4,7 +4,7 @@
       class="tag-container"
       v-for="(option, key) in tags"
       :key="key"
-      v-bind:value="option"
+      :value="option"
     >
       <div class="tag">
         <img class="tag-icon" src=../assets/tag.svg />

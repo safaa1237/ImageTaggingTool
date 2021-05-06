@@ -1,10 +1,9 @@
 <template>
   <div>
-    <div class="image" v-on:click="openTaggingPage()">
-      <a target="_blank" href="img_5terre.jpg">
+    <div class="image" @:click="openTaggingPage()">
+      <a target="_blank">
         <img
           src="https://upload.wikimedia.org/wikipedia/commons/6/68/St_Kilda_Road_start.jpg"
-          alt="Cinque Terre"
           width="600"
           height="400"
         />
@@ -19,12 +18,7 @@ export default {
   name: "ImageGallery",
   components: {},
   method: {
-    openTaggingPage() {
-      // this.$router.push({
-      //   name: "tagging",
-      //   //query: { final_result: this.result },
-      // });
-    },
+    openTaggingPage() {},
   },
 };
 </script>

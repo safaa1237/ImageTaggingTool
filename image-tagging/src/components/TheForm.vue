@@ -5,14 +5,14 @@
         <label>Weather Condition:</label>
         <div
           class="radio"
-          v-for="(option, key) in weatherCondition"
+          v-for="(option, key) in weatherConditions"
           :key="key"
-          v-bind:value="option"
+          :value="option"
         >
           <input
             type="checkbox"
             v-model="weatherConditionVar"
-            v-bind:name="option"
+            :name="option"
             :value="option"
           />
           {{ option }}
@@ -25,16 +25,16 @@
         v-bind:name="laneCountVar"
         type="number"
         v-model="laneCountVar"
-        v-bind:max="laneCount.length - 1"
+        :max="laneCounts.length - 1"
       />
     </div>
     <div class="form-control">
       <label>Environment</label>
-      <select v-bind:name="environmentVar" v-model="environmentVar">
+      <select :name="environmentVar" v-model="environmentVar">
         <option
-          v-for="(option, key) in environment"
+          v-for="(option, key) in environments"
           :key="key"
-          v-bind:value="option"
+          :value="option"
         >
           {{ option }}
         </option>
@@ -46,7 +46,7 @@
         class="radio"
         v-for="(option, key) in corruptImage"
         :key="key"
-        v-bind:value="option"
+        :value="option"
       >
         <input
           type="radio"
@@ -66,7 +66,7 @@
 
 <script>
 //the hard coded tags here could be taken from a web servie.
-const weatherCondition = [
+const weatherConditions = [
   "rainy",
   "sunny",
   "cloudy",
@@ -74,7 +74,7 @@ const weatherCondition = [
   "snow",
   "unclear",
 ];
-const laneCount = [
+const laneCounts = [
   "One",
   "Two",
   "Three",
@@ -85,7 +85,7 @@ const laneCount = [
   "Eight",
   "unclear",
 ];
-const environment = [
+const environments = [
   "tunnel",
   "highway",
   "inner city",
@@ -99,9 +99,9 @@ export default {
   name: "Dropdown",
   data() {
     return {
-      weatherCondition: weatherCondition,
-      laneCount: laneCount,
-      environment: environment,
+      weatherConditions: weatherConditions,
+      laneCounts: laneCounts,
+      environments: environments,
       corruptImage: corruptImage,
       weatherConditionVar: [],
       laneCountVar: null,
@@ -113,7 +113,6 @@ export default {
   methods: {
     submitForm() {
       this.$store.commit("reset");
-      console.log(this.$store.state.tags);
       this.$store.state.tags = [...this.weatherConditionVar];
       if (this.laneCountVar != null) {
         this.$store.state.tags.push("lanes: " + this.laneCountVar);
