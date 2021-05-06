@@ -39,7 +39,7 @@
 ## About The Project
 
  <a >
-    <img src="/image-tagging/src/assets/capture.JPG" alt="Logo" width="80" height="80">
+    <img src="/image-tagging/src/assets/capture.JPG" alt="Logo" width="100%" height="100%">
   </a>
 
 the project is an answer to a code challeneg and the requirememte are :
